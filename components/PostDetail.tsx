@@ -1,12 +1,12 @@
-import React from 'react';
+import { FC, ReactElement, MouseEvent, Fragment } from 'react';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Title from './Title';
 
-function preventDefault(event) {
+const preventDefault = (event: MouseEvent) => {
   event.preventDefault();
-}
+};
 
 const useStyles = makeStyles({
   postContext: {
@@ -14,10 +14,10 @@ const useStyles = makeStyles({
   },
 });
 
-export default function PostDetail() {
+const PostDetail: FC = (): ReactElement => {
   const classes = useStyles();
   return (
-    <React.Fragment>
+    <Fragment>
       <Title>POST TITLE</Title>
       <Typography component="p" variant="h4">
         SOMETHING RELEVANT
@@ -30,6 +30,8 @@ export default function PostDetail() {
           View in Reddit!
         </Link>
       </div>
-    </React.Fragment>
+    </Fragment>
   );
-}
+};
+
+export default PostDetail;
