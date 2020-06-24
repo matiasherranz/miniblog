@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement, FC } from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default function About() {
+const About: FC = (): ReactElement => {
   const classes = useStyles();
   return (
     <Container maxWidth="sm">
@@ -50,4 +50,6 @@ export default function About() {
       </Box>
     </Container>
   );
-}
+};
+
+export default About;
