@@ -53,6 +53,11 @@ Reference on material-ui I used:
 Theming and colors:
 - https://material-ui.com/customization/palette/
 
+An interesting thing I learned while working on this project is to automatically set the dark mode on the application's theme based on the user's preference on the browser. To accomplish this I used the `useMediaQuery` hook provided by MaterialUI library in conjunction with the `useMemo` hook from react.
+
+- You can see the project's code for this [here](https://github.com/matiasherranz/miniblog/blob/master/pages/_app.tsx#L23)
+- And the references on this feature [here](https://material-ui.com/customization/palette/#user-preference).
+
 ### Development environment setup and code style considerations
 
 The main pieces of the code styling and standard-compliance setup I used are the following:
@@ -67,8 +72,11 @@ The main pieces of the code styling and standard-compliance setup I used are the
 
 ## Development approach used
 
-TBD
-iterative, daily releases
+For this project I decided to try this idea: make a daily release to depict the progress I made each day on the project.
+
+This way, the 1-day-long iterations can be seen here, listed making use of the **releases** feature from GitHub: https://github.com/matiasherranz/miniblog/releases
+
+![daily releases](./daily-releases.png)
 
 ## Interacting with the project
 
