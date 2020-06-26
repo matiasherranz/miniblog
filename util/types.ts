@@ -22,3 +22,18 @@ export type Post = {
     };
   };
 };
+
+export type RedditState = {
+  posts: Post[];
+  loading: string;
+  currentPost: Nullable<Post>;
+  error: Nullable<string>;
+  after: Nullable<string>;
+  hasMore: boolean;
+  readPostIds: Record<string, boolean>;
+  dismissedPostIds: Record<string, boolean>;
+};
+
+export type RedditStateType = {
+  reddit: RedditState;
+};
