@@ -1,5 +1,5 @@
 export type ToggleDrawerProps = {
-  setDrawerOpen: (arg0: boolean) => boolean;
+  setDrawerOpen: (arg0: boolean) => void;
   open: boolean;
 };
 
