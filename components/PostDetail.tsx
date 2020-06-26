@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PostDetail: FC = (): ReactElement => {
+const PostDetail: FC = (): ReactElement | null => {
   const classes = useStyles();
   const fixedHeightPaper = clsx(classes.paper, classes.paperHeight);
   const { currentPost: post } = useSelector(selectPosts);

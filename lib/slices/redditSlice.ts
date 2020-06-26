@@ -47,7 +47,8 @@ const redditSlice = createSlice({
     },
     [fetchRedditPosts.fulfilled.toString()]: (state, { payload }) => {
       state.posts = state.posts.concat(
-        payload.data.children.map((child) => child.data)
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        payload.data.children.map((child: { data: any }) => child.data)
       );
       state.after = payload.data.after;
       state.loading = 'loaded';

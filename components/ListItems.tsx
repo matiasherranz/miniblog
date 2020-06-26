@@ -24,6 +24,7 @@ import {
 import { fetchRedditPosts } from '../lib/reddit';
 import { BASE_REDDIT_URL } from '../util/constants';
 import { validateUrl } from '../util/utils';
+import { Post } from '../util/types';
 
 const ListItems: FunctionComponent = () => {
   const dispatch = useDispatch();
@@ -35,7 +36,7 @@ const ListItems: FunctionComponent = () => {
     hasMore,
   } = useSelector(selectPosts);
 
-  const handleSelectPost = (post) => {
+  const handleSelectPost = (post: Post) => {
     dispatch(setCurrentPost(post));
   };
 
