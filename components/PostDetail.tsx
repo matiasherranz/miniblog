@@ -33,7 +33,7 @@ const PostDetail: FC = (): ReactElement => {
           {/* Post detail */}
           <Grid item xs={12} md={12} lg={12}>
             <Paper className={fixedHeightPaper}>
-              <Typography component="p" variant="h4">
+              <Typography component="h5" variant="h5">
                 {post.title}
               </Typography>
 
