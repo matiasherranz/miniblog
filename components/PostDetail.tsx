@@ -22,7 +22,7 @@ const preventDefault = (event: MouseEvent) => {
 
 const PostDetail: FC = (): ReactElement => {
   const classes = useStyles();
-  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+  const fixedHeightPaper = clsx(classes.paper, classes.paperHeight);
 
   const post: Post = top50.data.children[0].data;
   return (

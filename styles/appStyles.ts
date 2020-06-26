@@ -76,8 +76,12 @@ const useStyles = makeStyles((theme) => ({
     overflow: 'auto',
     flexDirection: 'column',
   },
-  fixedHeight: {
-    height: 240,
+  paperHeight: {
+    height: '600px',
+    width: 'auto',
+  },
+  postContext: {
+    flex: 1,
   },
 }));
 
