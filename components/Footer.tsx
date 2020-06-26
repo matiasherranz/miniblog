@@ -1,10 +1,25 @@
 import React, { FC, ReactElement } from 'react';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import MuiLink from '@material-ui/core/Link';
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    footerMargin: {
+      marginBottom: '50px',
+    },
+  })
+);
+
 const Footer: FC = (): ReactElement => {
+  const classes = useStyles();
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
+    <Typography
+      className={classes.footerMargin}
+      variant="body2"
+      color="textSecondary"
+      align="center"
+    >
       {'Made by '}
       <MuiLink color="inherit" href="https://linkedin.com/in/matiasherranz">
         Matías Herranz
