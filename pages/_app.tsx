@@ -1,10 +1,12 @@
 import { useEffect, useMemo, Fragment, ReactElement, FC } from 'react';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import { createMuiTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { store, persistor } from '../lib/store';
 import palette from '../styles/palette';
 
 const MiniBlog: FC<AppProps> = (props: AppProps): ReactElement => {
@@ -40,10 +42,14 @@ const MiniBlog: FC<AppProps> = (props: AppProps): ReactElement => {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <Provider store={store}>
+        <PersistGate persistor={persistor}>
+          <ThemeProvider theme={theme}>
+            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+            <Component {...pageProps} />
+          </ThemeProvider>
+        </PersistGate>
+      </Provider>
     </Fragment>
   );
 };
