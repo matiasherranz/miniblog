@@ -12,9 +12,10 @@ import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 
 import Footer from './Footer';
-import top50 from '../util/top.json';
 import { getMediaUrl } from '../util/utils';
 import { BASE_REDDIT_URL } from '../util/constants';
+import { useSelector } from 'react-redux';
+import { selectPosts } from '../lib/slices/redditSlice';
 
 const useStyles = makeStyles((theme) => ({
   appBarSpacer: theme.mixins.toolbar,
@@ -34,8 +35,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   paperHeight: {
-    // height: '600px',
-    // width: 'auto',
     margin: 'auto',
   },
 }));
@@ -43,8 +42,11 @@ const useStyles = makeStyles((theme) => ({
 const PostDetail: FC = (): ReactElement => {
   const classes = useStyles();
   const fixedHeightPaper = clsx(classes.paper, classes.paperHeight);
+  const { currentPost: post } = useSelector(selectPosts);
 
-  const post: Post = top50.data.children[10].data;
+  // No post was selected yet, and skip rendering.
+  if (!post) return null;
+
   return (
     <main className={classes.content}>
       <div className={classes.appBarSpacer} />

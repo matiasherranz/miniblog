@@ -1,9 +1,9 @@
 import React, { FC, ReactElement } from 'react';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import MuiLink from '@material-ui/core/Link';
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     footerMargin: {
       marginBottom: '50px',
