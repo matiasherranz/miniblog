@@ -31,6 +31,27 @@ The main reasons being:
 - Excellent performance benchmarks ([reference](https://blog.logrocket.com/next-js-vs-create-react-app))
 - And last but not least: Awesome developer experience!
 
+### Client State Management
+
+As the store for the client-side state, I used [ReduxJS](https://redux.js.org/).
+
+To interact with the Redux store, I used [Redux Toolkit](https://redux-toolkit.js.org/). The main reasons being:
+- Developed and maintained by the same team behind Redux itself, as well as react-redux,
+- Enables use of the Redux DevTools Extension,
+- Integrated Reselect out of the box,
+- It includes utilities to simplify common use cases like store setup, creating reducers, immutable update logic, and more,
+- Provides good defaults for store setup out of the box, and includes the most commonly used Redux addons built-in,
+- Avoiding boilerplate! it lets you focus on the core logic your app needs, so you can do more work with less code,
+- And I haven't really used it before, but had to work with all sorts of redundant and vorbose boilerplate code around Redux store/reducers/actions/etc.
+
+To persist and rehydrate the redux store between page reloads, I used [redux-persist](https://github.com/rt2zz/redux-persist). Haven't used it before, but seemed well maintained and documented, and found a lot of hits when Googling "redux persist state", so I decided to give it a try.
+
+**Noteworthy options left outside:**
+
+I took a look at the [SWR library](https://swr.now.sh/), officially supported (developed and maintained) by the nice folks behind NextJS, but it does not play naturally with Redux, so I left it out. Perhaps on the *next* (pun intended!) project!
+
+Other option left outside was [Apollo Client Cache](https://www.apollographql.com/docs/react/data/local-state/), which provided client-side persistence and a great overall set of features, but does not look like a good side-kick for Redux. More nice tools and tricks for the another project!
+
 ### Typescript
 
 - Has a free IDE, that is created and maintained by the same company/people than the language itself (VS Code),
