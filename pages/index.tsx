@@ -1,9 +1,13 @@
-import React, { ReactElement, FC, useState } from 'react';
+import React, { ReactElement, FC, useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
-import PostDetail from '../components/PostDetail';
-import Header from '../components/Header';
 import LeftDrawer from '../components/LeftDrawer';
 import { makeStyles } from '@material-ui/core/styles';
+
+import PostDetail from '../components/PostDetail';
+import Header from '../components/Header';
+import { fetchRedditPosts } from '../lib/reddit';
 
 const useStyles = makeStyles({
   root: {
@@ -13,7 +17,15 @@ const useStyles = makeStyles({
 
 const Index: FC = (): ReactElement => {
   const classes = useStyles();
+  const dispatch = useDispatch();
   const [open, setDrawerOpen] = useState(true);
+
+  useEffect(() => {
+    async function dispatchFetchPosts() {
+      await dispatch(fetchRedditPosts());
+    }
+    dispatchFetchPosts();
+  }, [dispatch]);
 
   return (
     <div className={classes.root}>
