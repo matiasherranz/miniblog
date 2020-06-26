@@ -77,8 +77,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   paperHeight: {
-    height: '600px',
-    width: 'auto',
+    // height: '600px',
+    // width: 'auto',
+    margin: 'auto',
   },
   postContext: {
     flex: 1,
