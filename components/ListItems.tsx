@@ -23,7 +23,7 @@ import {
 } from '../lib/slices/redditSlice';
 import { fetchRedditPosts } from '../lib/reddit';
 import { BASE_REDDIT_URL } from '../util/constants';
-import { validateUrl } from '../util/utils';
+import { validateUrl, truncate } from '../util/utils';
 import { Post } from '../util/types';
 
 const ListItems: FunctionComponent = () => {
@@ -92,7 +92,7 @@ const ListItems: FunctionComponent = () => {
                     component="h2"
                     color="textPrimary"
                   >
-                    {post.title}
+                    {truncate(post.title, 20)}
                   </Typography>
                 }
                 secondary={
