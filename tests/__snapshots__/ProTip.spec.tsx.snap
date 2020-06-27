@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProTip ProTip component renders properly 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <ProTip>
+    <WithStyles(ForwardRef(Typography))
+      className="makeStyles-root-1"
+      color="textSecondary"
+    >
+      <ForwardRef(Typography)
+        className="makeStyles-root-1"
+        classes={
+          Object {
+            "alignCenter": "MuiTypography-alignCenter",
+            "alignJustify": "MuiTypography-alignJustify",
+            "alignLeft": "MuiTypography-alignLeft",
+            "alignRight": "MuiTypography-alignRight",
+            "body1": "MuiTypography-body1",
+            "body2": "MuiTypography-body2",
+            "button": "MuiTypography-button",
+            "caption": "MuiTypography-caption",
+            "colorError": "MuiTypography-colorError",
+            "colorInherit": "MuiTypography-colorInherit",
+            "colorPrimary": "MuiTypography-colorPrimary",
+            "colorSecondary": "MuiTypography-colorSecondary",
+            "colorTextPrimary": "MuiTypography-colorTextPrimary",
+            "colorTextSecondary": "MuiTypography-colorTextSecondary",
+            "displayBlock": "MuiTypography-displayBlock",
+            "displayInline": "MuiTypography-displayInline",
+            "gutterBottom": "MuiTypography-gutterBottom",
+            "h1": "MuiTypography-h1",
+            "h2": "MuiTypography-h2",
+            "h3": "MuiTypography-h3",
+            "h4": "MuiTypography-h4",
+            "h5": "MuiTypography-h5",
+            "h6": "MuiTypography-h6",
+            "noWrap": "MuiTypography-noWrap",
+            "overline": "MuiTypography-overline",
+            "paragraph": "MuiTypography-paragraph",
+            "root": "MuiTypography-root",
+            "srOnly": "MuiTypography-srOnly",
+            "subtitle1": "MuiTypography-subtitle1",
+            "subtitle2": "MuiTypography-subtitle2",
+          }
+        }
+        color="textSecondary"
+      >
+        <p
+          className="MuiTypography-root makeStyles-root-1 MuiTypography-body1 MuiTypography-colorTextSecondary"
+        >
+          <LightBulbIcon
+            className="makeStyles-lightBulb-2"
+          >
+            <WithStyles(ForwardRef(SvgIcon))
+              className="makeStyles-lightBulb-2"
+            >
+              <ForwardRef(SvgIcon)
+                className="makeStyles-lightBulb-2"
+                classes={
+                  Object {
+                    "colorAction": "MuiSvgIcon-colorAction",
+                    "colorDisabled": "MuiSvgIcon-colorDisabled",
+                    "colorError": "MuiSvgIcon-colorError",
+                    "colorPrimary": "MuiSvgIcon-colorPrimary",
+                    "colorSecondary": "MuiSvgIcon-colorSecondary",
+                    "fontSizeInherit": "MuiSvgIcon-fontSizeInherit",
+                    "fontSizeLarge": "MuiSvgIcon-fontSizeLarge",
+                    "fontSizeSmall": "MuiSvgIcon-fontSizeSmall",
+                    "root": "MuiSvgIcon-root",
+                  }
+                }
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root makeStyles-lightBulb-2"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"
+                  />
+                </svg>
+              </ForwardRef(SvgIcon)>
+            </WithStyles(ForwardRef(SvgIcon))>
+          </LightBulbIcon>
+          Pro tip: Want to see another NextJS site?
+           
+          <WithStyles(ForwardRef(Link))
+            href="https://nextjs-blog.matiasherranz.vercel.app"
+          >
+            <ForwardRef(Link)
+              classes={
+                Object {
+                  "button": "MuiLink-button",
+                  "focusVisible": "Mui-focusVisible",
+                  "root": "MuiLink-root",
+                  "underlineAlways": "MuiLink-underlineAlways",
+                  "underlineHover": "MuiLink-underlineHover",
+                  "underlineNone": "MuiLink-underlineNone",
+                }
+              }
+              href="https://nextjs-blog.matiasherranz.vercel.app"
+            >
+              <WithStyles(ForwardRef(Typography))
+                className="MuiLink-root MuiLink-underlineHover"
+                color="primary"
+                component="a"
+                href="https://nextjs-blog.matiasherranz.vercel.app"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                variant="inherit"
+              >
+                <ForwardRef(Typography)
+                  className="MuiLink-root MuiLink-underlineHover"
+                  classes={
+                    Object {
+                      "alignCenter": "MuiTypography-alignCenter",
+                      "alignJustify": "MuiTypography-alignJustify",
+                      "alignLeft": "MuiTypography-alignLeft",
+                      "alignRight": "MuiTypography-alignRight",
+                      "body1": "MuiTypography-body1",
+                      "body2": "MuiTypography-body2",
+                      "button": "MuiTypography-button",
+                      "caption": "MuiTypography-caption",
+                      "colorError": "MuiTypography-colorError",
+                      "colorInherit": "MuiTypography-colorInherit",
+                      "colorPrimary": "MuiTypography-colorPrimary",
+                      "colorSecondary": "MuiTypography-colorSecondary",
+                      "colorTextPrimary": "MuiTypography-colorTextPrimary",
+                      "colorTextSecondary": "MuiTypography-colorTextSecondary",
+                      "displayBlock": "MuiTypography-displayBlock",
+                      "displayInline": "MuiTypography-displayInline",
+                      "gutterBottom": "MuiTypography-gutterBottom",
+                      "h1": "MuiTypography-h1",
+                      "h2": "MuiTypography-h2",
+                      "h3": "MuiTypography-h3",
+                      "h4": "MuiTypography-h4",
+                      "h5": "MuiTypography-h5",
+                      "h6": "MuiTypography-h6",
+                      "noWrap": "MuiTypography-noWrap",
+                      "overline": "MuiTypography-overline",
+                      "paragraph": "MuiTypography-paragraph",
+                      "root": "MuiTypography-root",
+                      "srOnly": "MuiTypography-srOnly",
+                      "subtitle1": "MuiTypography-subtitle1",
+                      "subtitle2": "MuiTypography-subtitle2",
+                    }
+                  }
+                  color="primary"
+                  component="a"
+                  href="https://nextjs-blog.matiasherranz.vercel.app"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                  variant="inherit"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+                    href="https://nextjs-blog.matiasherranz.vercel.app"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                  >
+                    Here's one!
+                  </a>
+                </ForwardRef(Typography)>
+              </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Link)>
+          </WithStyles(ForwardRef(Link))>
+        </p>
+      </ForwardRef(Typography)>
+    </WithStyles(ForwardRef(Typography))>
+  </ProTip>
+</Provider>
+`;

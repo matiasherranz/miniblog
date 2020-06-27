@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Footer component renders properly 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Footer>
+    <WithStyles(ForwardRef(Typography))
+      align="center"
+      className="makeStyles-footerMargin-1"
+      color="textSecondary"
+      variant="body2"
+    >
+      <ForwardRef(Typography)
+        align="center"
+        className="makeStyles-footerMargin-1"
+        classes={
+          Object {
+            "alignCenter": "MuiTypography-alignCenter",
+            "alignJustify": "MuiTypography-alignJustify",
+            "alignLeft": "MuiTypography-alignLeft",
+            "alignRight": "MuiTypography-alignRight",
+            "body1": "MuiTypography-body1",
+            "body2": "MuiTypography-body2",
+            "button": "MuiTypography-button",
+            "caption": "MuiTypography-caption",
+            "colorError": "MuiTypography-colorError",
+            "colorInherit": "MuiTypography-colorInherit",
+            "colorPrimary": "MuiTypography-colorPrimary",
+            "colorSecondary": "MuiTypography-colorSecondary",
+            "colorTextPrimary": "MuiTypography-colorTextPrimary",
+            "colorTextSecondary": "MuiTypography-colorTextSecondary",
+            "displayBlock": "MuiTypography-displayBlock",
+            "displayInline": "MuiTypography-displayInline",
+            "gutterBottom": "MuiTypography-gutterBottom",
+            "h1": "MuiTypography-h1",
+            "h2": "MuiTypography-h2",
+            "h3": "MuiTypography-h3",
+            "h4": "MuiTypography-h4",
+            "h5": "MuiTypography-h5",
+            "h6": "MuiTypography-h6",
+            "noWrap": "MuiTypography-noWrap",
+            "overline": "MuiTypography-overline",
+            "paragraph": "MuiTypography-paragraph",
+            "root": "MuiTypography-root",
+            "srOnly": "MuiTypography-srOnly",
+            "subtitle1": "MuiTypography-subtitle1",
+            "subtitle2": "MuiTypography-subtitle2",
+          }
+        }
+        color="textSecondary"
+        variant="body2"
+      >
+        <p
+          className="MuiTypography-root makeStyles-footerMargin-1 MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignCenter"
+        >
+          Made by 
+          <WithStyles(ForwardRef(Link))
+            color="inherit"
+            href="https://linkedin.com/in/matiasherranz"
+          >
+            <ForwardRef(Link)
+              classes={
+                Object {
+                  "button": "MuiLink-button",
+                  "focusVisible": "Mui-focusVisible",
+                  "root": "MuiLink-root",
+                  "underlineAlways": "MuiLink-underlineAlways",
+                  "underlineHover": "MuiLink-underlineHover",
+                  "underlineNone": "MuiLink-underlineNone",
+                }
+              }
+              color="inherit"
+              href="https://linkedin.com/in/matiasherranz"
+            >
+              <WithStyles(ForwardRef(Typography))
+                className="MuiLink-root MuiLink-underlineHover"
+                color="inherit"
+                component="a"
+                href="https://linkedin.com/in/matiasherranz"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                variant="inherit"
+              >
+                <ForwardRef(Typography)
+                  className="MuiLink-root MuiLink-underlineHover"
+                  classes={
+                    Object {
+                      "alignCenter": "MuiTypography-alignCenter",
+                      "alignJustify": "MuiTypography-alignJustify",
+                      "alignLeft": "MuiTypography-alignLeft",
+                      "alignRight": "MuiTypography-alignRight",
+                      "body1": "MuiTypography-body1",
+                      "body2": "MuiTypography-body2",
+                      "button": "MuiTypography-button",
+                      "caption": "MuiTypography-caption",
+                      "colorError": "MuiTypography-colorError",
+                      "colorInherit": "MuiTypography-colorInherit",
+                      "colorPrimary": "MuiTypography-colorPrimary",
+                      "colorSecondary": "MuiTypography-colorSecondary",
+                      "colorTextPrimary": "MuiTypography-colorTextPrimary",
+                      "colorTextSecondary": "MuiTypography-colorTextSecondary",
+                      "displayBlock": "MuiTypography-displayBlock",
+                      "displayInline": "MuiTypography-displayInline",
+                      "gutterBottom": "MuiTypography-gutterBottom",
+                      "h1": "MuiTypography-h1",
+                      "h2": "MuiTypography-h2",
+                      "h3": "MuiTypography-h3",
+                      "h4": "MuiTypography-h4",
+                      "h5": "MuiTypography-h5",
+                      "h6": "MuiTypography-h6",
+                      "noWrap": "MuiTypography-noWrap",
+                      "overline": "MuiTypography-overline",
+                      "paragraph": "MuiTypography-paragraph",
+                      "root": "MuiTypography-root",
+                      "srOnly": "MuiTypography-srOnly",
+                      "subtitle1": "MuiTypography-subtitle1",
+                      "subtitle2": "MuiTypography-subtitle2",
+                    }
+                  }
+                  color="inherit"
+                  component="a"
+                  href="https://linkedin.com/in/matiasherranz"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                  variant="inherit"
+                >
+                  <a
+                    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
+                    href="https://linkedin.com/in/matiasherranz"
+                    onBlur={[Function]}
+                    onFocus={[Function]}
+                  >
+                    Matías Herranz
+                  </a>
+                </ForwardRef(Typography)>
+              </WithStyles(ForwardRef(Typography))>
+            </ForwardRef(Link)>
+          </WithStyles(ForwardRef(Link))>
+           using NextJS, Typescript and MaterialUI
+          . | 
+          2020
+        </p>
+      </ForwardRef(Typography)>
+    </WithStyles(ForwardRef(Typography))>
+  </Footer>
+</Provider>
+`;
