@@ -15,6 +15,7 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import Slide from '@material-ui/core/Slide';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
+import { makeStyles, Theme } from '@material-ui/core/styles';
 
 import {
   selectPosts,
@@ -26,7 +27,17 @@ import { BASE_REDDIT_URL } from '../util/constants';
 import { validateUrl, truncate } from '../util/utils';
 import { Post } from '../util/types';
 
+const useStyles = makeStyles({
+  MuiListItemSecondaryAction: {
+    top: '85%',
+    right: '5px',
+    position: 'absolute',
+    transform: 'translateY(-50%)',
+  },
+});
+
 const ListItems: FunctionComponent = () => {
+  const classes = useStyles();
   const dispatch = useDispatch();
   const {
     posts,
@@ -76,6 +87,10 @@ const ListItems: FunctionComponent = () => {
                   color="primary"
                   badgeContent="New"
                   invisible={readPostIds[post.id]}
+                  anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                  }}
                 >
                   <Avatar
                     alt={post.title}
@@ -125,7 +140,9 @@ const ListItems: FunctionComponent = () => {
                   </>
                 }
               />
-              <ListItemSecondaryAction>
+              <ListItemSecondaryAction
+                className={classes.MuiListItemSecondaryAction}
+              >
                 <Tooltip title="Dismiss Post">
                   <IconButton
                     color="secondary"
