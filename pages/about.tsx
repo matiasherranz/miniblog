@@ -1,11 +1,14 @@
 import React, { ReactElement, FC } from 'react';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+
 import Box from '@material-ui/core/Box';
-import ProTip from '../components/ProTip';
+import CardMedia from '@material-ui/core/CardMedia';
+import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
+import ProTip from '../components/ProTip';
+import Typography from '@material-ui/core/Typography';
+
 import { CssBaseline } from '@material-ui/core';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -13,6 +16,7 @@ const useStyles = makeStyles((theme: Theme) =>
       margin: theme.spacing(6, 0, 3),
       fontSize: '1.2rem',
       lineHeight: 1.5,
+      color: '#3a2816',
     },
   })
 );
@@ -23,13 +27,19 @@ const About: FC = (): ReactElement => {
     <Container maxWidth="sm">
       <CssBaseline />
       <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
+        <Typography variant="h4" component="h1" align="center" gutterBottom>
           Hi there! 😃
         </Typography>
-        <Link href="/">← Return to blog</Link>
+        <Link href="/" variant="h6">
+          ← Return
+        </Link>
+
+        <CardMedia src="profile.jpg" component="img" title={'post.title'} />
+
         <Typography
           variant="h6"
           color="textSecondary"
+          align="center"
           className={classes.aboutText}
         >
           Howdy! I&apos;m Matías, a fullstack software engineer from{' '}

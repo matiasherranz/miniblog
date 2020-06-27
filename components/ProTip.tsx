@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const ProTip: FC = (): ReactElement => {
   const classes = useStyles();
   return (
-    <Typography className={classes.root} color="textSecondary">
+    <Typography className={classes.root} align="center" color="textSecondary">
       <LightBulbIcon className={classes.lightBulb} />
       Pro tip: Want to see another NextJS site?{' '}
       <Link href="https://nextjs-blog.matiasherranz.vercel.app">

@@ -6,14 +6,14 @@ import { BASE_REDDIT_URL, PAGE_SIZE } from '../util/constants';
 
 type ParamsType = Record<string, string>;
 
+const typePrefix = 'async/fetchRedditPosts';
 export const fetchRedditPosts = createAsyncThunk<
   Promise<string>,
   void,
   { state: RedditStateType }
 >(
-  'notes/fetchPosts',
+  typePrefix,
   async (_, { getState, rejectWithValue }) => {
-    console.log('FETCHING POSTS');
     try {
       const { reddit } = getState();
       const params: ParamsType = {
