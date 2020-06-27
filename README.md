@@ -105,6 +105,15 @@ This way, the 1-day-long iterations can be seen here, listed making use of the *
 
 ![daily releases](./daily-releases.png)
 
+### Daily releases:
+
+Click on the linkd to see the incremental changelogs and screenshots of how the app looked by the end of each day.
+
+- [Day #1](https://github.com/matiasherranz/miniblog/releases/tag/day1)
+- [Day #2](https://github.com/matiasherranz/miniblog/releases/tag/day2)
+- [Day #3](https://github.com/matiasherranz/miniblog/releases/tag/day3)
+- [Day #4](https://github.com/matiasherranz/miniblog/releases/tag/day4)
+
 ## Interacting with the project
 
 ### Run the project
