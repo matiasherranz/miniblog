@@ -1,20 +1,37 @@
 import { mount } from 'enzyme';
+import configureStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
+import reduxThunk from 'redux-thunk';
 
-import { store } from '../lib/store';
 import LeftDrawer from '../components/LeftDrawer';
+import top from './mocks/top.json';
 
-describe('LeftDrawer', () => {
-  const getWrapper = () =>
+describe('LeftDrawer opened|closed', () => {
+  const createStore = configureStore([reduxThunk]);
+  const store = createStore({
+    reddit: {
+      posts: top.data.children.map((child) => child.data),
+      readPostIds: {},
+      dismissedPostIds: {},
+    },
+    drawer: {
+      mobileOpen: true,
+    },
+  });
+  const getWrapper = (open: boolean) =>
     mount(
       <Provider store={store}>
-        <LeftDrawer setDrawerOpen={() => true} open={true} />
+        <LeftDrawer setDrawerOpen={() => open} open={open} />
       </Provider>
     );
 
-  test('LeftDrawer component renders properly', () => {
-    const wrapper = getWrapper();
+  test('LeftDrawer renders properly', () => {
+    // Drawer opened
+    const openWrapper = getWrapper(true);
+    expect(openWrapper).toMatchSnapshot();
 
-    expect(wrapper).toMatchSnapshot();
+    // Drawer closed
+    const closedWrapper = getWrapper(false);
+    expect(closedWrapper).toMatchSnapshot();
   });
 });
