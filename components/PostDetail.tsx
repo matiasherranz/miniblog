@@ -1,4 +1,5 @@
 import { FC, ReactElement } from 'react';
+import { useSelector } from 'react-redux';
 import moment from 'moment';
 import clsx from 'clsx';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -14,7 +15,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Footer from './Footer';
 import { getMediaUrl } from '../util/utils';
 import { BASE_REDDIT_URL } from '../util/constants';
-import { useSelector } from 'react-redux';
 import { selectPosts } from '../lib/slices/redditSlice';
 
 const useStyles = makeStyles((theme) => ({
