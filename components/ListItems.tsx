@@ -36,7 +36,13 @@ const useStyles = makeStyles({
   },
 });
 
-const ListItems: FunctionComponent = () => {
+type ListItemProps = {
+  closeDrawer: () => void;
+};
+
+const ListItems: FunctionComponent<ListItemProps> = ({
+  closeDrawer,
+}: ListItemProps) => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const {
@@ -48,6 +54,8 @@ const ListItems: FunctionComponent = () => {
   } = useSelector(selectPosts);
 
   const handleSelectPost = (post: Post) => {
+    // After selecting a post, always close the drawer
+    closeDrawer();
     dispatch(setCurrentPost(post));
   };
 

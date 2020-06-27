@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
+    paddingLeft: '96px', // Closed drawer width (74px) + the default 24px
   },
   paper: {
     padding: theme.spacing(2),

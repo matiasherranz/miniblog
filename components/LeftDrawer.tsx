@@ -26,9 +26,10 @@ import { fetchRedditPosts } from '../lib/reddit';
 
 const useStyles = makeStyles((theme) => ({
   drawerPaper: {
-    position: 'relative',
+    position: 'fixed',
     whiteSpace: 'nowrap',
     width: DRAWER_WIDTH,
+    paddingBottom: 60,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -68,6 +69,8 @@ const LeftDrawer: FC<ToggleDrawerProps> = ({
     dispatch(toggleAllPosts());
   };
 
+  const closeDrawer = () => setDrawerOpen(false);
+
   return (
     <Drawer
       variant="permanent"
@@ -77,7 +80,7 @@ const LeftDrawer: FC<ToggleDrawerProps> = ({
       open={open}
     >
       <div className={classes.toolbarIcon}>
-        <IconButton onClick={() => setDrawerOpen(false)}>
+        <IconButton onClick={closeDrawer}>
           <ChevronLeftIcon />
         </IconButton>
       </div>
@@ -94,8 +97,10 @@ const LeftDrawer: FC<ToggleDrawerProps> = ({
         }
         useWindow={false}
       >
-        <ListItems />
+        <ListItems closeDrawer={closeDrawer} />
       </InfiniteScroll>
+
+      {/* Dismiss/Undismiss all posts button */}
       <Box position="fixed" bottom="0" width={'100%'} zIndex="modal">
         <Button
           variant="contained"
