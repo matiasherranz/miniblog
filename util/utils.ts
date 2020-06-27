@@ -23,3 +23,9 @@ export const getMediaUrl = (post: Post): string | undefined => {
     return validateUrl(post.thumbnail, FALLBACK_IMAGE);
   }
 };
+
+export const truncate = (input: string, truncateAt: number): string => {
+  return input.length > truncateAt
+    ? `${input.substring(0, truncateAt)}...`
+    : input;
+};
