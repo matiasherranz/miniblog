@@ -14,10 +14,12 @@ exports[`ProTip ProTip component renders properly 1`] = `
 >
   <ProTip>
     <WithStyles(ForwardRef(Typography))
+      align="center"
       className="makeStyles-root-1"
       color="textSecondary"
     >
       <ForwardRef(Typography)
+        align="center"
         className="makeStyles-root-1"
         classes={
           Object {
@@ -56,7 +58,7 @@ exports[`ProTip ProTip component renders properly 1`] = `
         color="textSecondary"
       >
         <p
-          className="MuiTypography-root makeStyles-root-1 MuiTypography-body1 MuiTypography-colorTextSecondary"
+          className="MuiTypography-root makeStyles-root-1 MuiTypography-body1 MuiTypography-colorTextSecondary MuiTypography-alignCenter"
         >
           <LightBulbIcon
             className="makeStyles-lightBulb-2"
