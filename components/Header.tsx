@@ -1,4 +1,4 @@
-import { FC, ReactElement } from 'react';
+import { FC, ReactElement, MouseEvent } from 'react';
 import { useRouter } from 'next/router';
 import clsx from 'clsx';
 import AppBar from '@material-ui/core/AppBar';
@@ -50,7 +50,7 @@ const Header: FC<ToggleDrawerProps> = ({
   const classes = useStyles();
   const router = useRouter();
 
-  const handleAboutPageClick = (e) => {
+  const handleAboutPageClick = (e: MouseEvent) => {
     e.preventDefault();
     router.push('/about');
   };
