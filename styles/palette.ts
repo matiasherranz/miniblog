@@ -13,8 +13,8 @@ const pallete = {
   },
   background: {
     // default: '#504c4c',
-    default: '#6a8881d9'
-  }
+    default: '#6a8881d9',
+  },
 };
 
 export default pallete;
