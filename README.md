@@ -3,6 +3,7 @@
 ## Tech stach used
 
 ### NodeJS
+
 The node version used id 12 (12.9.1 to be precise). To set it, I use `nvm` like this:
 
 ```bash
@@ -36,6 +37,7 @@ The main reasons being:
 As the store for the client-side state, I used [ReduxJS](https://redux.js.org/).
 
 To interact with the Redux store, I used [Redux Toolkit](https://redux-toolkit.js.org/). The main reasons being:
+
 - Developed and maintained by the same team behind Redux itself, as well as react-redux,
 - Enables use of the Redux DevTools Extension,
 - Integrated Reselect out of the box,
@@ -48,7 +50,7 @@ To persist and rehydrate the redux store between page reloads, I used [redux-per
 
 **Noteworthy options left outside:**
 
-I took a look at the [SWR library](https://swr.now.sh/), officially supported (developed and maintained) by the nice folks behind NextJS, but it does not play naturally with Redux, so I left it out. Perhaps on the *next* (pun intended!) project!
+I took a look at the [SWR library](https://swr.now.sh/), officially supported (developed and maintained) by the nice folks behind NextJS, but it does not play naturally with Redux, so I left it out. Perhaps on the _next_ (pun intended!) project!
 
 Other option left outside was [Apollo Client Cache](https://www.apollographql.com/docs/react/data/local-state/), which provided client-side persistence and a great overall set of features, but does not look like a good side-kick for Redux. More nice tools and tricks for the another project!
 
@@ -68,16 +70,20 @@ It is one of the best looking UI frameworks I've seen, and provides great mobile
 It also provides a great set of components and styles, palettes, and a rather extensive set of tools that integrate perfectly with ReactJS and Typescript.
 
 Reference on material-ui I used:
+
 - https://github.com/mui-org/material-ui/
 - https://material-ui.com/
 
 Theming and colors:
+
 - https://material-ui.com/customization/palette/
 
 An interesting thing I learned while working on this project is to automatically set the dark mode on the application's theme based on the user's preference on the browser. To accomplish this I used the `useMediaQuery` hook provided by MaterialUI library in conjunction with the `useMemo` hook from react.
 
 - You can see the project's code for this [here](https://github.com/matiasherranz/miniblog/blob/master/pages/_app.tsx#L23)
 - And the references on this feature [here](https://material-ui.com/customization/palette/#user-preference).
+
+For the infinite scroll, I went with [react-infinite-scroller](https://www.npmjs.com/package/react-infinite-scroller), that I've used before and liked it, and it continues to be an active and well maintained project.
 
 ### Development environment setup and code style considerations
 
@@ -136,3 +142,23 @@ npm start
 ```
 
 Or deploy it to a Vercel's Now server right from GitHub following [this steps](https://nextjs.org/docs/deployment).
+
+### Running the tests
+
+To run the tests, use the following command:
+
+```bash
+npm run jest
+```
+
+This will run all tests, which includes:
+
+- **Snapshot tests:** Snapshot tests are a very useful tool whenever you want to make sure your UI does not change unexpectedly,
+- **Unit tests**
+- Coverage tests.
+
+#### The tools/libraries used for testing were:
+
+- **Jest** [link](https://jestjs.io/): Jest is the main JavaScript testing framework I used, as it provides a complete and simple to use set of tools, including snapshot testing, coverage testing and easy mocking.
+- **Enzyme** [link](https://enzymejs.github.io/enzyme/): Alongside Jest, I used Enzyme for rendering components, query and interact with the virtual DOM. Enzyme is a JavaScript Testing utility for React that makes it easier to test your React Components' output. You can also manipulate, traverse, and in some ways simulate runtime given the output.
+- **redux-mock-store:** [link](https://github.com/reduxjs/redux-mock-store) A mock store for testing Redux async action creators and middleware.
