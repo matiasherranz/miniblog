@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 const Index: FC = (): ReactElement => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const [open, setDrawerOpen] = useState(true);
+  const [open, setDrawerOpen] = useState(false);
 
   useEffect(() => {
     async function dispatchFetchPosts() {
