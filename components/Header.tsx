@@ -1,10 +1,14 @@
 import { FC, ReactElement } from 'react';
+import { useRouter } from 'next/router';
 import clsx from 'clsx';
 import AppBar from '@material-ui/core/AppBar';
+import Badge from '@material-ui/core/Badge';
+import Link from '@material-ui/core/Link';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import { ToggleDrawerProps } from '../util/types';
 import { makeStyles } from '@material-ui/core/styles';
 import { DRAWER_WIDTH } from '../util/constants';
@@ -44,6 +48,12 @@ const Header: FC<ToggleDrawerProps> = ({
   open,
 }: ToggleDrawerProps): ReactElement => {
   const classes = useStyles();
+  const router = useRouter();
+
+  const handleAboutPageClick = (e) => {
+    e.preventDefault();
+    router.push('/about');
+  };
 
   return (
     <AppBar
@@ -69,6 +79,12 @@ const Header: FC<ToggleDrawerProps> = ({
         >
           Some reddit!
         </Typography>
+        <IconButton color="inherit">
+          <Badge badgeContent="Hi!" color="secondary">
+            <PersonOutlineIcon onClick={handleAboutPageClick} />
+          </Badge>
+        </IconButton>
+        <Link href="/about">About the author</Link>
       </Toolbar>
     </AppBar>
   );
