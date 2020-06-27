@@ -13,10 +13,17 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     aboutText: {
-      margin: theme.spacing(6, 0, 3),
       fontSize: '1.2rem',
       lineHeight: 1.5,
       color: '#3a2816',
+    },
+    imageCard: {
+      marginTop: '20px',
+      marginBottom: '10px',
+      borderRadius: 16,
+      backgroundColor: theme.palette.primary.light,
+      color: theme.palette.primary.contrastText,
+      boxShadow: 'none',
     },
   })
 );
@@ -34,7 +41,12 @@ const About: FC = (): ReactElement => {
           ← Return
         </Link>
 
-        <CardMedia src="profile.jpg" component="img" title={'post.title'} />
+        <CardMedia
+          src="profile.jpg"
+          component="img"
+          title={'post.title'}
+          className={classes.imageCard}
+        />
 
         <Typography
           variant="h6"
