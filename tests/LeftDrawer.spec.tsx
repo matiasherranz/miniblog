@@ -34,4 +34,24 @@ describe('LeftDrawer opened|closed', () => {
     const closedWrapper = getWrapper(false);
     expect(closedWrapper).toMatchSnapshot();
   });
+
+  test('When selectin (tapping/clicking) a post, it shows its detail', () => {
+    const wrapper = getWrapper(false);
+    const postNumber = 7;
+
+    // Click!
+    wrapper
+      .find('.MuiButtonBase-root.MuiListItem-root')
+      .at(postNumber)
+      .simulate('click');
+
+    const actions = store.getActions();
+    const { reddit } = store.getState();
+    expect(actions).toEqual([
+      {
+        type: 'reddit/setCurrentPost',
+        payload: reddit.posts[postNumber],
+      },
+    ]);
+  });
 });
